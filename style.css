@@ -70,6 +70,21 @@ sup {
 	background-color: rgb(242, 242, 242)
 }
 
+.article_list {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 28px;
+	border: 2px dashed;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-color: rgb(91, 70, 54);
+	background-color: rgb(242, 242, 242)
+}
+
+
+<div class="breakout" style="font-size: 18px; line-height: 28px;">
+
 /* Dark mode:
 a:link {
 	color: #9FEEFE; 

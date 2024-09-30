@@ -1,0 +1,76 @@
+body {
+    /*dark mode:*/
+	/*background-color: #191919;
+	color: #d7d7d7; */
+	background-color: rgb(244, 236, 216);
+	color: rgb(91, 70, 54);
+	padding-left: 30%;
+    padding-right: 30%;
+	padding-bottom: 5%;
+	margin: 0%;
+	display: grid;
+	text-align: left;
+	/*font-family: "Open Sans", sans-serif;*/
+	font-family: "Veranda", sans-serif;/*'Times New Roman', Times, serif;*/
+  	font-optical-sizing: auto;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 28px;
+
+	/* This removes the left and right padding if the user is on a mobile */
+	@media screen and (max-width: 600px) {
+		padding-left: 2%;
+		padding-right: 2%;
+	}
+}
+
+p {
+	margin-top: 2%;
+	margin-bottom: 2%;
+	margin-left: 0%;
+	margin-right: 0%;
+}
+
+.header {
+	padding-top: 2%;
+	width: 100%;
+	font-size: 18px;
+	/*color: #f8f8f8*/
+	color: rgb(91, 70, 54)
+}
+
+.separator {
+	margin-top: 1.5%;
+	background-color: rgb(91, 70, 54);
+	/*background-color: #f8f8f8;*/
+	height: 1px;
+}
+
+.title {
+	font-weight: 800;
+	font-size: 30px;
+}
+
+/* Dark mode:
+a:link {
+	color: #9FEEFE; 
+}
+a:hover {
+	color: #9fc5fe;
+}
+a:visited {
+	color: #D29FFE;
+}
+*/
+a:link {
+	color: rgb(0, 97, 224); 
+}
+a:hover {
+	color: rgb(0, 55, 128);
+}
+a:visited {
+	color: rgb(50, 28, 100);
+}
+
+
+	

@@ -2,7 +2,9 @@ body {
     /*dark mode:*/
 	/*background-color: #191919;
 	color: #d7d7d7; */
-	background-color: rgb(244, 236, 216);
+	/* yellowy brown
+	background-color: rgb(244, 236, 216);*/
+	background-color: rgb(188, 213, 171);
 	color: rgb(91, 70, 54);
 	padding-left: 30%;
     padding-right: 30%;
@@ -67,19 +69,20 @@ sup {
 	padding-left: 20px;
 	padding-right: 20px;
 	border-color: rgb(91, 70, 54);
-	background-color: rgb(242, 242, 242)
+	background-color: rgb(242, 242, 242);
 }
 
 .article_list {
 	font-weight: 600;
 	font-size: 18px;
 	line-height: 28px;
-	border: 2px dashed;
-	padding: 10px;
-	padding-left: 20px;
-	padding-right: 20px;
-	border-color: rgb(91, 70, 54);
-	background-color: rgb(242, 242, 242)
+}
+
+.year_tag {
+	font-weight: 500;
+	font-size: 25px;
+	line-height: 30px;
+	padding-top: 20px;
 }
 
 
@@ -97,10 +100,11 @@ a:visited {
 }
 */
 a:link {
-	color: rgb(0, 97, 224); 
+	/*color: rgb(0, 97, 224); */
+	color: rgb(242, 242, 242);
 }
 a:hover {
-	color: rgb(0, 55, 128);
+	color: rgb(242, 242, 242);
 }
 a:visited {
 	color: rgb(50, 28, 100);

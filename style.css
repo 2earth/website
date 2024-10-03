@@ -26,6 +26,9 @@ body {
 	}
 }
 
+img {
+	width: 100%;
+}
 p {
 	margin-top: 2%;
 	margin-bottom: 2%;

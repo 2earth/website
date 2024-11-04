@@ -99,8 +99,8 @@ a:visited {
 	color: #D29FFE;
 }
 */
-a:link {
-	/*color: rgb(0, 97, 224); */
+/*a:link {
+	/*color: rgb(0, 97, 224); 
 	color: rgb(242, 242, 242);
 }
 a:hover {
@@ -108,7 +108,7 @@ a:hover {
 }
 a:visited {
 	color: rgb(50, 28, 100);
-}
+}*/
 
 #subscribe-email {
 	font-size: 16px;

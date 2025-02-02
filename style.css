@@ -29,6 +29,16 @@ body {
 img {
 	width: 100%;
 }
+
+/* 	- used for images which are smaller than the div they are in 
+	- when screen is small they fill the div with width */
+	
+.responsive-img {
+	@media screen and (max-width: 600px) {
+		width: 100% !important;
+	}
+}
+
 p {
 	margin-top: 2%;
 	margin-bottom: 2%;
@@ -143,6 +153,17 @@ a:visited {
 	font-size: 18px;
 }
 
-#subscribe-button:hover {opacity: 1}
+#subscribe-button:hover {
+	opacity: 1
+	}
+
+.code-container {
+	background: #272822;
+	color: #ffffff;
+	padding: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 5px;
+}
 
 	

@@ -46,13 +46,13 @@
 			<p></p>
 			<b>Utility and knowledge; can-knot or can-not</b>
 			<p>Obviously, knots serve a primarily utilitarian function and are likely one of the oldest human technologies. The archaeological record for knots is limited by the degredation of rope, so the earliest evidence of their invention is simply holes in stone or bone tools, or pieces which would have been tied together, such as a flint to a spear.</p>
-			<p>Knots are themselves immaterial, being formed from a relative motion of strands and objects, but completely transform the usefulness of the thing(s) they tie together, and the medium they are tied into. Knots can connect, slide, release, hold, restrain, transmit; there are an unknowable number of different knots and each is intentionally selected for its properties. Knowledge of a specific knot provides access to the properties it provides, if not, not. </p>
+			<p>Knots are themselves immaterial, being formed from a relative motion of strands and objects, but completely transform the usefulness of the thing(s) they tie together, and the medium they are tied into. Knots can connect, slide, release, hold, restrain, transmit; there are an unknowable number of different knots and each is intentionally selected for its properties. Knowledge of a specific knot provides access to the properties it provides - no knot knowledge means no knot knottage...</p>
 			<p>Knots are, in various activities, essential knowledge without which you simply cannot participate. In my life the figure-of-eight knot is a prerequisite for climbing – it’s simple, easy to inspect and self-tightening yet easy to loosen even after a fall. In a broader context, knots have been used throughout history for diverse needs. Construction, fishing, record-keeping, decoration, textiles and equipment for warfare – they all need knots.</p>
 			<p></p>
 			<b>Knots today</b>
 			<p>Are knots now an irrelevant relic of the pre-digital age? No, but I think the role of knots as a technology has changed along with our materials and needs. Division of labour has kindly relieved me, the office worker, of the need to know how to tie more than my climbing rope, shoelaces and, occasionally, a formal tie. Contemporary ropes are predominantly synthetic and in many applications replaced by alternative technologies like tape or metal cable, yet, in certain contexts, ropes (and thus knots) stubbornly persist. </p>
 			<p>It’s hard to imagine the obsolescence of ropes and knots in activities like (small-medium scale) fishing, climbing or camping. I wonder if this has to do with the flexibility, independence and human-scale of knotting combined with the impressive strength to weight ratio, corrosion resistance and durability of synthetic ropes. </p>
-			<p><a href="https://en.wikipedia.org/wiki/Rope">Ropes themselves</a> have undergone continuous technological development in manufacturing methods, materials and design (I recommend <a href="https://solar.lowtechmagazine.com/2010/06/lost-knowledge-ropes-and-knots/">this</a> interesting if slightly nostalgic article on the topic on lowtech magazine). Ropes are either braided or twisted (digression: <a href="https://www.iso.org/standard/3563.html">ISO 2</a> defines the direction of rope twist. ISO 1 defines a standard reference temperature) and are today made from a wide variety of primarily synthetic materials such as Polypropylene, Nylon, Polyester but also natural materials such as cotton, hemp, manila and sisal. Composites can be constructed to combine the desireable qualities of multiple materials. Synthetics have the advantage of greater strength, lower cost and reduced biodegradability and can be made to float - with obvious benefits. Incidentally, the primary function of twisting or braiding fibres to form rope is to distribute tension better between all fibres, rather than loading fibres in order of length.</p> 
+			<p><a href="https://en.wikipedia.org/wiki/Rope">Ropes themselves</a> have undergone continuous technological development in manufacturing methods, materials and design (I recommend <a href="https://solar.lowtechmagazine.com/2010/06/lost-knowledge-ropes-and-knots/">this</a> interesting if slightly nostalgic article on the topic on lowtech magazine). Ropes are either braided or twisted (digression: <a href="https://www.iso.org/standard/3563.html">ISO 2</a> defines the direction of rope twist. ISO 1 defines a standard reference temperature) and are today made from a wide variety of primarily synthetic materials such as Polypropylene, Nylon, Polyester but also natural materials such as cotton, hemp, manila and sisal. Composites can be constructed to combine the desireable qualities of multiple materials. Synthetics have the advantage of greater strength, lower cost and reduced biodegradability and can be made to float - with obvious benefits for maritime applications. Incidentally, the primary function of twisting or braiding fibres to form rope is to distribute tension better between all fibres, rather than loading fibres in order of length.</p> 
 			<p>Today we are more likely to be interacting with cables than ropes. Modern electrical cables, electromagnets and motor windings all depend on highly technical and exact braids, coils and windings for their engineered functions. Coiling and the use of several strands in electrical cables provides flexibility, redundancy and a higher current carrying capacity than a solid conductor would. Cable screening, shielding and armour all provide essential mechanical or electromagnetic interference protective properties and motor or generator windings exploit the electromagnetic effect to translate electricity to rotation or vice versa. Cables are not ropes and windings are not knots, yet some of the essential properties of each persist in these modern applications.</p>
 			<p></p>
 			<b>Geometric appeal</b>
@@ -64,7 +64,7 @@
 			<p></p>
 			<span id="project"><b>The project</b></span>
 			<p>Musings aside, let’s try and code a program which draws Celtic knots programmatically! The Celts would have loved it!</p>
-			<p>The reason for using Python is, obviously, a cultured reference to the Ouroboros or twisting serpents motif symbols. Conveniently it's also the only programming language I'm familiar with today and that I wanted to try out <a href="https://pyscript.net/">PyScript</a>, which uses <a href="https://developer.mozilla.org/en-US/docs/WebAssembly">WebAssembly</a> to run a compact Python interpreter directly inside your browser.</p>
+			<p>The reason for using Python is, obviously, a cultured reference to the Ouroboros or twisting serpents motif symbols. Conveniently it's also the only programming language I'm familiar with today and I wanted to try out <a href="https://pyscript.net/">PyScript</a>, which uses <a href="https://developer.mozilla.org/en-US/docs/WebAssembly">WebAssembly</a> to run a compact Python interpreter directly inside your browser.</p>
 			<p>Stylistically, the target knot is rectilinear and thus relatively simple – more akin to carved examples than the more organic illustrated examples found in the Book of Kells. </p>
 			<p></p>
 			<b>Basic research: easy for humans, hard for computers</b>
@@ -78,7 +78,7 @@
 			<p>This set of instructions is quite easy for humans but totally insufficient for creating a computer program, which needs every action to be rigorously defined! Looking for “the maths of Celtic Knots” I had to steer clear from papers on knot theory, but did find <a href="https://www.maths.ed.ac.uk/~v1ranick/knots/celtic.pdf">a great 2012 undergraduate paper</a> from the University of Edinburgh “Celtic Knot Theory” which provided some rules I could use as a starting point. My thanks to the authors! After a lot of thought and some trial and error, I came out with a working program.</p>
 			<p></p>
 			<b>Celtic Computing: Coding a Celtic Knot</b>
-			<p>Bear in mind that the following is simplified for brevity and to focus on the key points. The full program is available here. Let’s get started!</p>
+			<p>Bear in mind that the following is simplified for brevity and to focus on the key points. The full source code is available <a href="https://pyscript.com/@2earth/celtic-knot/latest?files=README.md">here</a>. Let’s get started!</p>
 			<div style="border-left: 5px solid; border-color: rgb(91, 70, 54); padding-left: 10px; padding-top: 0px; padding-bottom: 0px;">
 				<p><b>Step 1: Create a grid</b></p>
 				<p>We need to create two arrays. The first “tile array” will hold the information about each segment of the knot, which we will break up into “tiles”. This array will have dimensions <code>m x n</code>, where <code>m</code> and <code>n</code> are both even. This array will be populated with 5 different types of tile: Corners, Straights, Right-bends, Left-bends, and diagonals. </p>
@@ -133,8 +133,7 @@
 				<p>Let’s work out the details for the diagonal, straight and corner tiles. We will leave the bends for the time being as they require a bit more thought.</p>
 				<p>To help with this and following steps, we can set up a simple “compass”. Starting from “0” at North, “1” at North-East and proceeding clockwise to “7” at North-West, this turns out to be really helpful in computing the knot programmatically. For each tile, we can thus record the “entry” and “exit” directions (the order being unimportant for this program, we can adopt a simple convention of lower number first). </p>
 				<img class="responsive-img" style="width: 50%" src="./assets/20250202/20250202-8.png" alt="A compass to help calculate rope entry and exit points">
-				<p>With that in place we can continue placing the diagonals and straight tiles. </p>
-				<p>Let’s place diagonals on tiles with no neighbouring barriers. These will go:</p>
+				<p>With that tool established we can place the diagonals tiles on tiles with no neighbouring barriers:</p>
 				<div class="code-container">
 					<code>
 						<p>if (row+column) is odd:</p>
@@ -143,7 +142,7 @@
 						<p>&nbsp direction is NE to SW</p>
 					</code>
 				</div>
-				<p>On tiles with 2 neighbouring barriers, we can apply a quick check to find out whether these barriers are adjacent or parallel. Knowing whether the tile is a diagonal or straight, we can then determine the rotation of the tile.</p>
+				<p>With the diagonals done, let's place corner and straight tiles. On tiles with 2 neighbouring barriers, we can apply a quick check to find out whether the barriers are adjacent (i.e. corner) or parallel (i.e. straight). With that done, it's not too hard to determine the entry and exit points of the tile.</p>
 				<img class="responsive-img" style="width: 40%" src="./assets/20250202/20250202-10.png" alt="Step 5">
 			</div>
 			<p></p>
@@ -184,7 +183,7 @@
 			<p></p>
 			<div style="border-left: 5px solid; border-color: rgb(91, 70, 54); padding-left: 10px; padding-top: 0px; padding-bottom: 0px;">	
 				<p><b>Step 7: Draw the graphic</b></p>
-				<p>There are many options for doing this. I opted to use PILLOW and specifically the line command, which allowed me to pass image “coordinates” corresponding to the start and end point of each tile section. In the case of bends and corners, I simply had to add a the tile’s center coordinates in-between the start and end points, and specify a radius.</p>
+				<p>There are many options for doing this. I opted to use <a href="https://pypi.org/project/pillow/">Pillow</a> and specifically the line command, which allowed me to pass image “coordinates” corresponding to the start and end point of each tile section. In the case of bends and corners, I simply added the tile’s center coordinates between the start and end points and specified a radius.</p>
 				<p>Drawing the same line twice with different colours and line width allows us to achieve a line stroke effect.</p>
 			</div>
 			<p></p>

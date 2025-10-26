@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="./style.css" type="text/css" rel="stylesheet">
+	<meta charset="UTF-8"> 
+</head>
+
+<title>TR | 2025-10-26</title>
+
+<body style="background-color: rgb(255, 72, 0)">
+
+	<div class="header">
+		<span style="display:inline-block; color: #ffc4a7; width: 40%; font-size: 24px">Tom Ruddell</span><span style="display:inline-block; width: 60%; margin-left: 0%;text-align: right;"><a href="./pages.html">pages</a> / <a href="./index.html">about</a> / <a href="./subscribe.html">follow</a></span>
+		<div class="separator" style="background-color: #ffc4a7"></div>
+	</div>
+
+	<div class="main">
+		<span class="title" style="color: #ffc4a7"><p><b>Welcome to hell; please drive safely</b></p></span>
+		<span class="body" style="color: #ffc4a7"><i>26th October 2025</i></span>
+		<div class="separator" style="background-color: #ffc4a7"></div>
+		<div class="body" style="background-color: #ffc4a7; padding: 1em;">
+			<p></p>
+			<p>A while back we watched <a href="https://www.youtube.com/watch?v=K1VBCjEcyJE">a video on the topic of British road crossings</a> (which I strongly recommend, as well as <a href="https://www.youtube.com/watch?v=qAJmtxC703U">Chris's shorter video specifically about Zebra crossings</a>) and since then Tess has been calling out the different crossings by their proper animal names. This explains why, with tickets to a Halloween event with costumes mandatory, she proposed we dress as zebra crossings. Belisha beacons, to be exact. And thus, on the day of said event, we scrambled to make said costumes.</p>
+			<p>Belisha beacons are a British street-furniture design icon, yet despite their partner the Zebra crossing, aren’t well-known by name. What’s a Belisha Beacon? It’s a flashy yellow sphere on the top of a black-and-white stripey pole. Oooh, you say. I didn’t know they were called that. Why are they called that? Well, the Minister of Transport in the 1930s (Mr <a href="https://en.wikipedia.org/wiki/Leslie_Hore-Belisha">Leslie Hore Belisha</a>) was nearly hit by a car while crossing the road.</p>
+			<p>There was a set of spare <a href="https://www.charlesendirect.com/products/belisha-beacons/">Charles Endirect Belisha beacons</a> sat in the warehouse at EGG Lighting for years until we donated them to the <a href="https://www.canarts.org.uk/">Glasgow Circular Arts Network</a>, so I was quite familiar with them not just as street furniture but as <a href="https://simmonsigns.co.uk/news/90-years-of-the-belisha-beacon/">a luminaire</a>. It turns out that the mandatory flash rate for Belisha beacons is 750ms, which I can tell you because it says so in BS 8442:2022+A1:2023:</p>
+			<p><i>The light of a pedestrian crossing globe shall flash with the following characteristics:</p>
+			<p>a) a flashing rate of (40±4) flashes per minute; and</p>
+			<p>b) a light-on period of between 50% and 60% of total cycle time</i></p>
+			<p>The point to make here is that road safety and driving culture in the UK has been shaped from the earliest stages by political decisions and design/engineering interventions. The UK has pioneered a number of design responses which we consider ubiquitous today, such as the red-amber-green traffic light, the <a href="https://en.wikipedia.org/wiki/Pelican_crossing">Pelican crossing</a> (1969 - <u>pe</u>destrian <u>li</u>ght <u>con</u>trolled) and the Toucan crossing (a cyclist's favourite - "Two Can" cross). Technology continues to be a relevant factor in the pedestrian experience, with Pelican crossings phased out in 2016 in favour of <a href="https://en.wikipedia.org/wiki/Puffin_crossing">Puffin crossings</a> which use sensors to track pedestrians both on the kerb and in the crossing, aiming to hold lights while pedestrians are still crossing and to avoid halting traffic if there are no pedestrians on the kerb. I assume these are based on infrared sensors but with some extra processing.</p>
+			<p>So: the design specification. Flashing yellow sphere or ‘halo’ around our heads. Black-and-white stripey pole. Zebra crossing ‘rug’. We did not aim to comply with the requirements of BS 8442, however the ingress protection requirements would be quite practical in the case of spilled drinks. We’d discussed the basic design in the week and Tess had made one cardboard neck collar which we reckoned would hold up a beacon halo. We had some old storage boxes with diffuse plastic inner structure and black/white fabric outers; perfect for both the beacon and for the stripey elements. Ten hours.</p>
+			<p></p>
+			<p><b>It's just a blinking yellow light</b></p>
+			<p>Well, I was stubborn and didn’t want to buy some fairy lights or similar. I wanted to do the build and didn’t want the hassle and risk of delayed postage or not-quite-right design.</p>
+			<p>Flashing some LEDs at about 1Hz is no trouble with a microcontroller (Delay(1000);) but as I’d recently been using 555 timing ICs I figured I could avoid the Arduino and make a small circuit for each costume. An AA battery pack would feed 5V to the circuit, comprising of a 555-based timing circuit which would switch a transistor (avoiding too much current and heating of the 555) to power a string of LEDs. I added a DPDT microswitch to toggle between a string of yellow LEDs (i.e. white LEDs painted with yellow Posca marker) and a string of red LEDs. Yellow, the colour of safe road crossings. Red, the colour of Hell. Makes sense.</p>
+			
+			<a href="./assets/20251026/20251026-1.jpg"><img src="./assets/20251026/20251026-1.jpg" style="width: 50%; padding-left: 25%; alt="Basic and somewhat incorrect circuit diagram"></a>
+			
+			<p>I got this up and running on the breadboard fairly quickly, after a bit of faff finding resistor and capacitor values which would combine to give a 1Hz period.</p>
+			
+			<a href="./assets/20251026/20251026-2.jpg"><img src="./assets/20251026/20251026-2.jpg" alt="on the breadboard"></a>
+			
+			<p>Now, an issue. This is a simple circuit but still involves quite a few connections, and this doesn’t even include connections for all the LED strings and colour-select microswitch. I was pretty sure a freeform circuit would become unmanageable but I didn’t have any stripboard for making a PCB. Well, we did have some copper sheet leftover from Architectural model-making while Tess was at Uni…might work.</p>
+			
+			<a href="./assets/20251026/20251026-3a.jpg"><img src="./assets/20251026/20251026-3a.jpg" alt="this is not a circuitboard - yet"></a>
+			
+			<p>So, I sketched a quick PCB design, working more with blocks rather than traces and trying to keep each block as geometrically simple as possible. The 555 pins are pretty close together so I decided to use a few wires with heatshrink to take out the complexity of the PCB (a bit like the reverse panel on a 2-layer PCB). </p>
+			
+			<a href="./assets/20251026/20251026-3.jpg"><img src="./assets/20251026/20251026-3.jpg" style="width: 50%; padding-left: 25%; alt="PCB layout, ish, 1:1, ish"></a>
+			
+			<p>I drew out the cut lines on the copper to keep the two ‘PCBs’ roughly the same. While I had images of cutting with a craft knife, cutting out the copper with scissors was actually really easy. </p>
+			<a href="./assets/20251026/20251026-4.jpg"><img src="./assets/20251026/20251026-4.jpg" alt="PCB lines"></a>
+			<a href="./assets/20251026/20251026-6.jpg"><img src="./assets/20251026/20251026-6.jpg" alt="PCB cut out"></a>
+			<p>There was a bit of trial and error here. I could have flattened it a bit more to help the pieces sit flat. I also decided to punch holes with a nail and hammer which I figured would allow a sort of through-hold soldering, but it turned out this wasn’t necessary. Step one was melting the cutting mat I had the copper sitting on, but an old wooden chopping board worked nicely. Once I got the hang of it, the copper soldered really well. The trick is to heat the plate and apply solder in a puddle, then dip the wire/pin into the puddle, then agitate slightly and remove the iron.</p>
+			<a href="./assets/20251026/20251026-7.jpg"><img src="./assets/20251026/20251026-7.jpg" alt="PCB holes cut"></a>
+			<a href="./assets/20251026/20251026-8.jpg"><img src="./assets/20251026/20251026-8.jpg" alt="PCB number 2"></a>
+			<a href="./assets/20251026/20251026-9.jpg"><img src="./assets/20251026/20251026-9.jpg" alt="555 IC leads"></a>
+			<p>My setup was tested to the limit here. An open window is a poor substitute for an activated carbon filter, a socket clamped in an adjustable spanner is a poor substitute for a soldering iron rest and perhaps most of all, a gas hob is a poor and dangerous substitute for a hot air gun. Ok, I did switch to using heat from the iron but it’s just not that great.</p>
+			<a href="./assets/20251026/20251026-18.jpg"><img src="./assets/20251026/20251026-18.jpg" style="width: 50%; padding-left: 25%;" alt="safe, ish"></a>
+			
+			<p><b>That looks… improvised</b></p>
+			<p>I had visions of poignant engineering art, handcrafted living sculpture in copper, the flow of electrons guided by my will and… well yeah in reality it looked pretty rough and ready. Tess's verdict "that looks... improvised". Well that's true, but look, the LED sure did blink and time is really getting on. Time to make PCB #2.</p>
+			<a href="./assets/20251026/20251026-12.jpg"><img src="./assets/20251026/20251026-12.jpg" alt="Hello world!"></a>
+			<a href="./assets/20251026/20251026-13.jpg"><img src="./assets/20251026/20251026-13.jpg" alt="vision to reality"></a>
+			<p>This is a sort of turning point in the day for me where fumes and extended focus started to chip away. The final step of an otherwise neatly-made free-form copper PCB was soldering the battery pack leads. Done, nice.</p>
+			<p>Unfortunately, I killed the 555 with the wrong polarity voltage, which necessitated cutting it out and re-soldering a replacement in a much more fiddly way. Smart response: could have put a polarity protection diode on, eh? Or double-checked before flicking the switch?</p>
+			<p>So, two PCBs done but far from suitable for wearing in a club. I needed to glue the traces to a substrate and encapsulate. Really dreaming of that stripboard about now – probably time to just buy some for the next project in advance? I didn’t have patience for UHU to set and we’d run out of hot-glue, so the ‘solution’ was super-glue to plastic sheet and mummification in black electrical tape. Done!</p>
+			<a href="./assets/20251026/20251026-19.jpg"><img src="./assets/20251026/20251026-19.jpg" alt="two PCBs"></a>
+			<a href="./assets/20251026/20251026-20.jpg"><img src="./assets/20251026/20251026-20.jpg" alt="underside of the PCB"></a>
+			<a href="./assets/20251026/20251026-21.jpg"><img src="./assets/20251026/20251026-21.jpg" alt="glued to backing"></a>
+			<p>The next sting was that in my super-glue-xuberance I must have jammed one of the microswitches, somehow electrically disconnected from both throw states. De-solder, re-solder replacement. Working.</p>
+			<a href="./assets/20251026/20251026-22.jpg"><img src="./assets/20251026/20251026-22.jpg" alt="PCB complete"></a>
+			
+			<p><b>A Beacon of hope: final assembly</b></p>
+			<p>Tess having finished the collars, poles and zebra crossing (you know, the actual costumes), we worked together on making the Belisha beacon headgear. These consisted of a front and back horseshoe of translucent plastic segments, electrical-taped together, with a cardboard inner edge and a PVC tube for the outer edge, which we hoped would allow some light out the edges.</p>
+			<a href="./assets/20251026/20251026-14.jpg"><img src="./assets/20251026/20251026-14.jpg" style="width: 50%; padding-left: 25%; alt="Cutting out plastic segments"></a>
+			<a href="./assets/20251026/20251026-15.jpg"><img src="./assets/20251026/20251026-15.jpg" alt="Assembling the beacons"></a>
+			<p>Into the void was hastily jammed a string of LEDs (in parallel loops of 2 in series, a nice balance of forward voltage and brightness without adding resistors). At this point, feeling exhausted, under pressure to get something working and basically wanting to leave (and annoyed at myself for laboriously soldering up a loom of red and yellow LEDs but connecting every second LED backwords, rendering the whole thing useless), it was time to compromise.</p>
+			<p>I dropped the second string of red LEDs, dropped the number of LEDs per headgear from 6 to 4 and connected them with pin-wires rather than soldering cut-to-length wires. No photos exist of this phase - time did not permit such luxuries as self reflection. But here we are; project done. Welcome to hell; please drive safely.</p>
+			
+			<p><b>Oh, this isn’t a costume for wearing, this is a project</b></p>
+			<p>At first we were both a bit disappointed with the outcome and both heatsets went straight into a shopping bag. The real-life zebra crossing on the way mocked us a bit – its light so bright and uniform, its pole so distinct. Our work wasn’t neat and I’d had to cut back on the red light trick, but we had pulled off a cool concept in one mad sprint and with almost no purchased materials (just LEDs and black fabric from the charity shop). </p>
+			<a href="./assets/20251026/20251026-23.jpg"><img src="./assets/20251026/20251026-23.jpg" style="width: 50%; padding-left: 25%; alt="welcome to hell - please drive safely"></a>
+			<a href="./assets/20251026/20251026-24.jpg"><img src="./assets/20251026/20251026-24.jpg" style="width: 50%; padding-left: 25%; alt="what would a belisha beacon drink? water, as it turns out"></a>
+			<a href="./assets/20251026/20251026-25.jpg"><img src="./assets/20251026/20251026-25.jpg" style="width: 50%; padding-left: 25%; alt="easy to spot!"></a>
+			<p>The headsets held up really well and made it easy to find each other in the club, something that really stresses me out normally. I’d say the concept was unique and I’m glad we did it; our friends thought it was hilarious and I think it’s cool to step outside the Halloween canon. That said, are zebra crossings Halloween themed? Well, it depends on your attitude to road safety…</p>
+			<p>In terms of the project, we were both forced to solve immediate problems in creative ways. I don’t think I’ll rush to use my cut-copper freeform PCB technique again, but I’m glad I did it.</p>
+			<p>Maybe next year we'll start before the day-of...</p>
+
+
+
+		<div class="separator" style="background-color: #ffc4a7"></div>
+		</div>
+		
+		<p></p>
+	<div class="breakout">
+		Thanks for reading! If you enjoyed this and would like to stay in touch, consider <a href="./subscribe.html">subscribing</a> to this blog - you'll receive an email whenever I next add an entry. Cheers!
+	</div>
+
+  
+
+</body>
+</html>

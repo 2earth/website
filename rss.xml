@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tom Ruddell's design and technology blog</title>
+        <link>https://2earth.github.io/website/</link>
+        <description>
+            I'm an engineer working in Glasgow, Scotland. This personal blog is a collection of my writing on whatever I find interesting, mainly on the themes of design and sustainability.
+        </description>
+        <language>en-uk</language>
+        <pubDate>Sun, 26 Oct 2025 00:00 GMT</pubDate>
+        <docs>https://www.rssboard.org/rss-specification</docs>
+        <atom:link href="https://www.2earth.github.io/website/rss.xml" rel="self" type="application/rss+xml"/>
+        
+        <item>
+            <title>
+                Welcome to hell; please drive safely
+            </title>
+            <link>
+                https://2earth.github.io/website/20251026.html
+            </link>
+            <description>
+                This post features some history and future of UK pedestrian crossings, excerpts from British Standard BS 8442, ramshackle hand-cut copper circuits and Belisha Beacon halloween costumes. Welcome to hell; please drive safely.
+            </description>
+            <pubDate>
+                Sun, 26 Oct 2025 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20251026.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>
+                On Dyson, techno-centric design and social consumption
+            </title>
+            <link>
+                https://2earth.github.io/website/20250707.html
+            </link>
+            <description>
+                Dyson exemplifies a particularly ‘techno-centric’ design approach and in this post I wanted to explore how that manifests in their product design and marketing strategy, as well as what broader impact it has on designers and the field of design itself.
+            </description>
+            <pubDate>
+                Mon, 07 Jul 2025 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20250707.html
+            </guid>
+        </item>
+
+        <item>
+            <title>
+                Early modern grain elevators: “listen to the counsels of the American engineers”
+            </title>
+            <link>
+                https://2earth.github.io/website/20250601.html
+            </link>
+            <description>
+                Join me as I learn about grain elevators, explore their design evolution and try to understand why they were such powerful metaphors for the leading European Modern architects.
+            </description>
+            <pubDate>
+                Sun, 01 Jun 2025 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20250601.html
+            </guid>
+        </item>
+
+        <item>
+            <title>
+                Lanark to Sloy – a look at early Scottish Hydro
+            </title>
+            <link>
+                https://2earth.github.io/website/20250421.html
+            </link>
+            <description>
+                With help from some amazing archival images, this post takes a trip from Lanark to Sloy and explores the significance of these pioneering 1926 stations, a year before their centennary!
+            </description>
+            <pubDate>
+                Mon, 21 Apr 2025 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20250421.html
+            </guid>
+        </item>
+
+        <item>
+            <title>
+                Celtic Code: Drawing knots with Python
+            </title>
+            <link>
+                https://2earth.github.io/website/20250202.html
+            </link>
+            <description>
+                What would have happened if the Celts had access to computers and specifically the Python programming language? This post answers that question with a fun web-app that lets you create and save your own Celtic knots in-browser, as well as briefly exploring the history of the Celts, knots and rope.
+            </description>
+            <pubDate>
+                Sun, 02 Feb 2025 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20250202.html
+            </guid>
+        </item>
+
+        <item>
+            <title>
+                Santa's Sustainability Audit: Scope 1, 2 and 3
+            </title>
+            <link>
+                https://2earth.github.io/website/20241208.html
+            </link>
+            <description>
+                Ever wondered what would happen if Santa did a life cycle assessment?
+            </description>
+            <pubDate>
+                Sun, 08 Dec 2024 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20241208.html
+            </guid>
+        </item>
+
+        <item>
+            <title>
+                A week at the International Electrotechnical Commission
+            </title>
+            <link>
+                https://2earth.github.io/website/20241103.html
+            </link>
+            <description>
+                I recently attended the annual International Electrotechnical Commission (IEC) General Meeting as a Young Professional. After a packed week of networking, workshops and talks I’ve come away with a hard-to-get insight into how the IEC works, how to get involved and what a career in international standards is like. I also know about five million new acronyms.
+            </description>
+            <pubDate>
+                Sun, 03 Nov 2024 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20241103.html
+            </guid>
+        </item>
+
+        <item>
+            <title>
+                The world's oldest working mechanical clock
+            </title>
+            <link>
+                https://2earth.github.io/website/20241003.html
+            </link>
+            <description>
+                I have made a 3D model of the world’s oldest working mechanical clock, in Salisbury Cathedral. This post explores timekeeping technology through the times, the clock itself and reflects on design-for-longevity.
+            </description>
+            <pubDate>
+                Thu, 03 Oct 2024 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20241003.html
+            </guid>
+        </item>
+
+        <item>
+            <title>
+                Migration and modernism: Nikolaus Pevsner
+            </title>
+            <link>
+                https://2earth.github.io/website/20240704.html
+            </link>
+            <description>
+                In 1933 the 31 year-old Nikolaus Pevsner, an art and architectural historian lecturing at University of Gottingen in Germany, was forced from his post and emigrated to the UK, settling in Hampstead where he would live the rest of his life.
+            </description>
+            <pubDate>
+                Thu, 04 Jul 2024 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20240704.html
+            </guid>
+        </item>
+
+        <item>
+            <title>
+                Lighting and Sustainability: Engineering Change
+            </title>
+            <link>
+                https://2earth.github.io/website/20230306.html
+            </link>
+            <description>
+                Article on remanufacturing luminaires for Lighting Journal (May 2023)
+            </description>
+            <pubDate>
+                Mon, 06 Mar 2023 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20230306.html
+            </guid>
+        </item>
+
+        <item>
+            <title>
+                GreenLight Alliance: Code of Practice for luminaire remanufacture
+            </title>
+            <link>
+                https://2earth.github.io/website/20220921.html
+            </link>
+            <description>
+                Article building the case for a code of practice for the remanufacture of luminaires, for arc magazine issue 130.
+            </description>
+            <pubDate>
+                Wed, 21 Sep 2022 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20220921.html
+            </guid>
+        </item>
+
+        <item>
+            <title>
+                GreenLight Alliance: A Dive into Remanufacturing
+            </title>
+            <link>
+                https://2earth.github.io/website/20220301.html
+            </link>
+            <description>
+                Article introducing remanufacturing in the lighting industry, for arc magazine issue 126. 
+            </description>
+            <pubDate>
+                Wed, 01 Mar 2022 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20220301.html
+            </guid>
+        </item>
+
+        <item>
+            <title>
+                Entering a new geopolitical era: The transition to renewables and its geopolitical implications
+            </title>
+            <link>
+                https://2earth.github.io/website/20200126.html
+            </link>
+            <description>
+                Exploring global energy production and demand trends and exploring possible geopolitical outcomes.
+            </description>
+            <pubDate>
+                Sun, 26 Jan 2020 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20200126.html
+            </guid>
+        </item>
+
+        <item>
+            <title>
+                Heat Networks: Basics
+            </title>
+            <link>
+                https://2earth.github.io/website/20200122.html
+            </link>
+            <description>
+                Exploring heat networks, heat networks and the practicalities. 
+            </description>
+            <pubDate>
+                Wed, 22 Jan 2020 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20200122.html
+            </guid>
+        </item>
+
+        <item>
+            <title>
+                Lithium
+            </title>
+            <link>
+                https://2earth.github.io/website/20200106.html
+            </link>
+            <description>
+                Looking at the growing importance of Lithium as a key material used in the production of batteries for energy storage and EVs, and the state of the supplychain - in particular the political turmoil in Bolivia, a major exporter.
+            </description>
+            <pubDate>
+                Mon, 06 Jan 2020 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20200106.html
+            </guid>
+        </item>
+
+        <item>
+            <title>
+                An Open Letter to the Planet
+            </title>
+            <link>
+                https://2earth.github.io/website/20190920.html
+            </link>
+            <description>
+                Produced as part of my "Think Slow Act Fast" project, I wrote and personally printed and bound this into a pamphlet and handed it out at various events, including the 2019 Climate Strikes (20th - 27th September 2019).
+            </description>
+            <pubDate>
+                Fri, 20 Sep 2019 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20190920.html
+            </guid>
+        </item>
+
+        <item>
+            <title>
+                Concerns regarding the Global Trade in Clothing
+            </title>
+            <link>
+                https://2earth.github.io/website/20190122.html
+            </link>
+            <description>
+                A short essay on the human and environmental costs associated with the textile industry under capitalism.
+            </description>
+            <pubDate>
+                Tue, 22 Jan 2019 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20190122.html
+            </guid>
+        </item>
+
+        <item>
+            <title>
+                Intuitive Design: Shower Thoughts
+            </title>
+            <link>
+                https://2earth.github.io/website/20171004.html
+            </link>
+            <description>
+                Reflecting on usability in product design, focusing on the example of bathroom showers.
+            </description>
+            <pubDate>
+                Wed, 04 Oct 2017 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20171004.html
+            </guid>
+        </item>
+
+    </channel>
+</rss>

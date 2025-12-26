@@ -11,6 +11,24 @@
         <docs>https://www.rssboard.org/rss-specification</docs>
         <atom:link href="https://2earth.github.io/website/rss.xml" rel="self" type="application/rss+xml"/>
         
+		<item>
+            <title>
+                How would we plan technology?
+            </title>
+            <link>
+                https://2earth.github.io/website/20251226.html
+            </link>
+            <description>
+                I fly through two contrasting planning initiatives in UK aerospace history in search of tangible examples of technology development being chosen by logic, without market pressures in the cockpit.
+            </description>
+            <pubDate>
+                Fri, 26 Dec 2025 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20251226.html
+            </guid>
+        </item>
+		
         <item>
             <title>
                 Welcome to hell; please drive safely

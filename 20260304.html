@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="./style.css" type="text/css" rel="stylesheet">
+	<meta charset="UTF-8"> 
+</head>
+
+<title>TR | 2026-03-04</title>
+
+<body>
+
+	<div class="header">
+		<span style="display:inline-block; width: 40%; font-size: 24px">Tom Ruddell</span><span style="display:inline-block; width: 60%; margin-left: 0%;text-align: right;"><a href="./pages.html">pages</a> / <a href="./index.html">about</a> / <a href="./subscribe.html">follow</a></span>
+		<div class="separator"></div>
+	</div>
+
+	<div class="main">
+		<span class="title"><p><b>Remembering Magnetic Memories and the Apollo AGC</b></p></span>
+		<span class="body"><i>4th March 2026</i></span>
+		<div class="separator"></div>
+		<div class="body">
+			<p></p>
+			<p id="intro"><b>Memories, both human and magnetic</b></p>
+			<p>In the 1960s NASA decisionmakers faced a foundational technical decision which would define the relationship between astronaut and spacecraft: when complex decisions, precise coordination and fast reaction was required, how should a spacecraft be controlled? They decided, in anticipation of developments so many areas of society, that the complex task of spaceflight would be best achieved through a merger of human oversight and digital execution; the human brain would be paired with an artificial memory comprised of wires and magnets.</p>
+			<p>The evolution of digital computing in the middle of the 20th century placed challenging demands on memory technologies; requiring more memory at a lower cost, faster access speed, higher density and with greater reliability than previous technologies. This provided the conditions for a creative period in which numerous magnetic memories were developed and refined, prior to the dominance, beginning around the 1970s, of the semiconductor-based memories that are today found in nearly all electronic devices. </p>
+			<p>It's these magnetic memories that I decided to explore, understand (at least superficially) and illustrate. 
+			
+			<a href="./assets/20260304/20260304-summaryimage.png"><img src="./assets/20260304/20260304-summaryimage.png" alt="A set of illustrations of magnetic memory technologies"></a>
+			<b>Above:</b> A collage of my illustrations of 5 magnetic memory technologies</a>. <i> Click to open full-size.</i><p></p>
+
+				
+			<p><b>Computers in spaceflight</b></p>
+			<p>In 1962, President John F. Kennedy <a href="https://www.rice.edu/jfk-speech">famously</a> committed NASA’s Apollo mission to landing a man on the moon before 1970. As NASA engineers scrambled to turn this objective into an achievable technical program, they came to understand the complexity of the task. Spacecraft would exceed the speed of sound, entering a new aerodynamic paradigm – and that before exiting the Earth’s atmosphere entirely and travelling by gravitational influences and thrust reaction alone. Astronauts could simply not react fast enough or in such abstract terms to control a craft travelling over 11 km/s and accurately and fuel-efficiently reach a target 384,000 km away.</p>
+			<p>Flying such a craft, they reasoned, would be more akin to extremely rapid control-feedback and solving complex equations than piloting a conventional plane. Even the lunar landing, a short period of manual control, was in fact mediated by the guidance computer, which operated feedback loops between the pilot’s controls, sensors and the craft’s actuators. </p>
+			<p>Assigning these tasks to the guidance computer led to the development of a specification; the Apollo Guidance Computer (AGC) needed to be able to make observations about the spacecraft’s state (e.g. velocity, position) at a suitable rate and then apply known information and calculations to decide which actions should be made to keep the craft on course.</p>
+			
+			<a href="./assets/20260304/20260304-apollo.jpg"><img src="./assets/20260304/20260304-apollo.jpg" alt="Interior of Apollo spacecraft"></a>
+			<b>Above:</b> Interior of Apollo spacecraft</a>. <i> Click to open full-size.</i><p></p>
+
+			<p>The AGC therefore needed to store the data and programs required to complete mathematical calculations and to interface with sensors, actuators and the user interface. Executing a program thus required read-only memory (ROM) to be loaded and commands to be executed using sensor data – which had to be held in temporary random-access “erasable” memory.</p>
+			<p>What made the AGC’s memory cores so specialised was not so much the quantity of data it stored or the calculations it would run but the constraints that applied to it. The memory needed to operate reliably while withstanding vibration, temperature and radiation, all while being as physically small and lightweight as possible. </p>
+
+			<p><b>Remembering Magnetic Memory</b></p>
+			<p>As I set myself the task to research and understand the key magnetic memories a great amount of confusion set in. Many of the technologies were well known, but rarely explored in much technical depth. They were referred to interchangeably or ambiguously. Good quality archival for these technologies was hard to find online – I wanted physical images of examples, diagrams and technical details of components, dates of production or development and meta-information like materials, provenance and performance characteristics. </p>
+			<p>While I’m sure each of these technologies features prominently in archives, private and public collections and museums, it seems like an approachable account of magnetic memory development is surprisingly hard to find. So, I sought to humbly contribute, at least far enough to satisfy for my own interest.</p>
+			
+			<a href="./assets/20260304/20260304-handbook.jpg"><img src="./assets/20260304/20260304-handbook.jpg" alt="Detail from the cover of the 1984 Intel Memory Components Handbook"></a>
+			<b>Above:</b> Detail from the cover of the 1984 Intel Memory Components Handbook</a>. <i> Click to open full-size.</i><p></p>
+
+			<p>But first, a note on memory itself, and an introduction to the parameters that help engineers categorise and describe memory technologies. </p>
+			<ul>
+				<li>Memories can be read/write or read-only. Read/write (or “erasable” in NASA terminology) memories are those which permit data to be changed/re-written as part of normal use. Read-only memory (ROM) cannot be easily changed.</li>
+				<li>Memories can be sequential or random access. If data has to be read in address sequence the data is sequential, otherwise if data can be read regardless of where in the memory it is stored the technology allows random access. As we will see, many memories can be read from a random address, with additional latency, despite being stored sequentially.</li>
+				<li>Memory can be volatile or non-volatile. Volatile memory is lost when the system loses power, non-voltage memory is retained on power-off. As far as I’m aware, all magnetic memory technologies are non-volatile, so we don’t need to worry about that.</li>
+				<li>Memory can feature a destructive-read, where data is removed from memory when read and must be re-written if still of use. I don’t know if this is a property that would ever be desired or is just a technological side-effect, give that there is a technical cost attached to additional re-writing operations.</li>
+				<li>In terms of other factors, the 1984 Intel Memory Components Handbook summarises an engineers requirements as access time, cost, memory size, power consumption and environmental considerations. Together with the memory category and engineer sought, he or she could make an appropriate selection if they knew the order of priority for each factor.</li>
+			</ul>
+			<div class="separator"></div>
+			<p id="memory_index"><b>Links to each memory:</b></p>
+			<p><a href="#intro">Introduction: Memory, both human and magnetic</a></p>
+			<ul>
+				<li><a href="#tros">TROS (Transformer Read Only Storage)</a></li>
+				<li><a href="#core_rope">Core rope memory</a></li>
+				<li><a href="#core">Magnetic core memory</a></li>
+				<li><a href="#tape">Magnetic tape memory</a></li>
+				<li><a href="#bubble">Bubble memory</a></li>
+			</ul>
+			<p><a href="#outro">Conclusions: Remembering obsolete memories</a></p>
+			<div class="separator"></div>
+
+			<p><a href="#memory_index">< back to index</a></p>
+			<div class="breakout">
+				<p id="tros"><b>TROS (Transformer Read Only Storage)</b></p>
+				<p style="margin-bottom: 0%; margin-top: 0%;"><b>Esoteric rating:</b> hobby project</p>
+				<p style="margin-bottom: 0%; margin-top: 0%;"><b>Complexity:</b> punch-cards on PCBs</p>
+				<p style="margin-bottom: 0%; margin-top: 0%;"><b>Read-only</b></p>
+				<p style="margin-top: 0%;"><b>Random access</b></p>
+			</div>
+			<p></p>
+			<p><b>When was it developed, and by who?</b></p>
+			<p>First developed by T. L. Dimond in 1945, Bell Laboratories. Used by IBM in their early mainframe computers. It surely complemented IBM’s punch-card computing machines by retaining a similar programming workflow.</p>
+
+			<a href="./assets/20260304/20260304-tros.png"><img src="./assets/20260304/20260304-tros.png" alt="Illustration of TROS memory"></a>
+			<b>Above:</b> An illustration of TROS memory</a>. <i> Click to open full-size.</i><p></p>
+
+			<p><b>How does it work?</b></p>
+			<p>A single conductor encodes a word by passing inside or outside numerous ferrites (the number of ferrites determining the word length), each with a sensing coil looped around to form a transformer. When a particular conductor (corresponding to a specific memory address) is energised an output current is induced on each ferrite that the conductor passes through, signifying a “1” bit. Ferrites that the conductor passes outside of do not have a current induced and thus signify a “0” bit.</p>
+			<p>In IBM’s implementation for the System/360 mainframe computer the ferrites are rectilinear “U” shapes and arranged in pairs in two rows, with a bar fixed on top to complete the flux loop. This allows the ferrites to be conveniently opened.</p>
+			
+			<a href="./assets/20260304/20260304-IBM_360_20_TROS.jpg"><img src="./assets/20260304/20260304-IBM_360_20_TROS.jpg" alt="Transformer matrix ROM (TROS), from the IBM System/360 Model 40"></a>
+			<b>Above:</b> Transformer matrix ROM (TROS), from the IBM System/360 Model 40</a>. <i> Click to open full-size.</i> By RTC, CC BY-SA 3.0, <a href="https://commons.wikimedia.org/w/index.php?curid=17802788">Wikimedia</a><p></p>
+
+			<p>Data was encoded on mylar (a trade-name of PET, a useful electrical insulator that would have been fairly novel at the time, being <a href="https://patents.google.com/patent/US2534028A/en?oq=2534028">patented in 1948</a>). The mylar sheets had 2 copper tracks which passed both inside and outside rectangular cutouts for the 2 rows of ferrites. The sheets could be punched on one of the 2 tracks to encode a 1 or 0 as described above. There were 60 ferrites (i.e. each word was 60 bits) and each sheet had 2 conductors running inside or outside each, meaning 120 bits per sheet.</p>
+			<p>The mylar sheets were then slotted around the ferrites and stacked above each other and the ferrites were closed with bars at the top (which featured the electrical windings for reading the bits. The conductors on each Mylar sheet were terminated to allow connection for addressing.</p>
+
+			<p><b>Benefits?</b></p>
+			<p>Fairly easy to re-program, involving opening the assembly and replacing Mylar sheets. IBM certainly had experience with punch-card programming and because this method could be employed to encode data onto the mylar sheets it must have been easier for programmers of the computers to use.</p>
+
+			<p><b>Drawbacks?</b></p>
+			<p>Very bulky and allegedly slower than other technologies. The bulk may not have been an issue for IBM’s early mainframes but would have precluded its use as memory requirements grew and computers shrunk. Speeds was another limitation.</p>
+
+			<p><b>References</b></p>
+			<p><a href="https://en.wikipedia.org/wiki/Transformer_read-only_storage">Wikipedia</a>, <a href="https://www.righto.com/2019/11/tros-how-ibm-mainframes-stored.html">Ken Shirrif's blog</a></p>
+
+			<div class="separator"></div>
+
+			<p><a href="#memory_index">< back to index</a></p>
+			<div class="breakout">
+				<p id="core_rope"><b>Core Rope</b></p>
+				<p style="margin-bottom: 0%; margin-top: 0%;"><b>Esoteric rating:</b> Space enthusiasts remember</p>
+				<p style="margin-bottom: 0%; margin-top: 0%;"><b>Complexity:</b> Rocket science / Expert level electro-knitting</p>
+				<p style="margin-bottom: 0%; margin-top: 0%;"><b>Read only</b></p>
+				<p style="margin-top: 0%;"><b>Random access</b></p>
+			</div>
+
+			<p><b>When was it developed, and by who?</b></p>
+			<p>I’m not sure. Wikipedia alleges it was used in the <a href="https://en.wikipedia.org/wiki/UNIVAC_I#UNIVAC_installations,_1951%E2%80%931954">UNIVAC I</a> in the early 1950s, but the description of magnetic core memory even in the <a href="https://en.wikipedia.org/wiki/UNIVAC_II#Magnetic_core">UNIVAC II</a> seems to match magnetic core memory, not core rope memory. It is certain that the MIT’s Instrumentation Lab (IL) made use of core rope in the Apollo Guidance Computer (AGC) in the early 1960s.
+
+			<a href="./assets/20260304/20260304-core_rope.png"><img src="./assets/20260304/20260304-core_rope.png" alt="Illustration of core rope memory"></a>
+			<b>Above:</b> An illustration of core rope memory</a>. <i> Click to open full-size.</i><p></p>
+
+			<p><b>How does it work?</b></p>
+			<p>There are a large number of larger-diameter magnetic cores – one per word. These cores must have a high magnetic permeability and have highly rectangular electro-magnetic induction characteristics; an example material being tapewound Molybdenum permalloy. What this means is that the magnetic cores are very sensitive to a changing magnetic field, and are “bi-stable”, that is, they always exist in one of two stable states (opposing polarisations). The cores can therefore be reliably and suddenly flipped between the two states if exposed to a certain electromagnetic field.
+			<p>In practice this “flipping” of the core is achieved by passing a sufficient current through a conductor passing through the core. The direction of the current will dictate the polarisation of the core. 
+			<p>An array of cores (1 core per word not per bit!) is then threaded with wires, which serve different functions:
+			<ul>
+				<li>Data wires, which encode bits depending on whether they pass inside or outside a core. The number of data wires determines the word size. Data wires which pass through a core encode a “1” and those outside encode a “0”</li>
+				<li>Set/reset wire, which passes through every core and which is pulsed with enough current to set the polarisation of the magnetic cores, flipping any cores which aren’t already in that state</li>
+				<li>Inhibit wires, which are used to address cores by opposing the electromagnetic field of the set/reset wire. The inhibit wires are structured in pairs, allowing the address to be encoded in binary, by passing inside or outside each core. Therefore, the number of address pairs is equal to the squareroot of the number of addresses (cores); for example, one inhibit pair could address 2 cores and 2 pairs could address 4 cores.</li>
+			</ul>
+			<a href="./assets/20260304/20260304-closeup.jpg"><img src="./assets/20260304/20260304-closeup.jpg" alt="Closeup of Core rope"></a>
+			<b>Above:</b> Closeup of Core rope</a>. <i> Click to open full-size.</i> <a href="https://wayback.archive-it.org/9060/20230418090745/https://authors.library.caltech.edu/5456/1/hrst.mit.edu/hrs/apollo/public/visual3.htm">Source</a>, via <a href="https://www.righto.com/2019/07/software-woven-into-wire-core-rope-and.html">Ken Shiriff</a><p></p>
+
+			<p>With that information let’s look at the function. </p>
+			<p>Core rope memory is read only once manufactured, yet to read an address proceeds in two stages. Recalling that each core addresses one word, the first stage is to flip the core which is to be read. The second stage is to flip that core again to read the bits in the word.</p>
+			<i><p>Stage 1:</i></p>
+			<p>A particular word is selected from the address by energising the binary combination of inhibit wires, resulting in all cores being inhibited except one. At the same time, the set/reset wire is energised with opposite polarity current to the inhibit wires – the net result being the addressed core being magnetically saturated into the “1” position.</p>
+			<i><p>Stage 2:</i></p>
+			<p>With only one core set, the set/reset wire is pulsed again in the opposite polarity to cause that single core to flip back to an unset state (“0”). This flipping induces a current in all data wires which pass through it (representing a binary “1”) and not affecting any which were wired around the core (a binary “0”).</p>
+
+			<p><b>Benefits?</b></p>
+			<p>Because the wires carry very low currents they are not bulky at all – in contrast conventional core memory encountered practical limitations in scale of the cores themselves. Thus by using one core per word rather than per bit, memory could be stored in very high density for the time. Early Apollo core rope modules had 128 data wires per core, later increased to 192 and with 512 cores per module and 4 modules, that achieved in excess of 500 kilo bits for the apollo guidance computer. </p>
+			<p>Once it was learned that astronaut urine could short-circuit the memory it was potted in a plastic resin – making the memory extremely robust once manufactured. These advantages made core rope a lightweight and space-efficient (get it?) technology suitable for the needs of the Apollo program.</p>
+
+			<p><b>Drawbacks?</b></p>
+			<p>Extremely expensive and time-consuming to manufacture. Programming or manufacturing errors are extremely difficult to inspect or debug. No method for full automation of wiring the cores was developed, making this technology unsuited to general or industrial use.</p>
+			<a href="./assets/20260304/20260304-manufacture"><img src="./assets/20260304/20260304-manufacture.jpg" alt="Manufacture of core rope memory."></a>
+			<b>Above:</b> Manufacture of core rope memory at Raytheon. In an uncropped version of the photo, a sign reads "Apollo production area". <i> Click to open full-size.</i> <a href="https://wayback.archive-it.org/9060/20230418090745/https://authors.library.caltech.edu/5456/1/hrst.mit.edu/hrs/apollo/public/visual3.htm">Source</a>, via <a href="https://www.righto.com/2019/07/software-woven-into-wire-core-rope-and.html">Ken Shiriff</a><p></p>
+
+			<p><b>References</b></p>
+			<p><a href="https://en.wikipedia.org/wiki/Core_rope_memory">Wikipedia</a>, <a href="https://www.youtube.com/watch?v=hckwxq8rnr0">Youtube - Curiousmarc</a>, <a href="https://web.archive.org/web/20160822041959/http://www.cs.ubc.ca/~hilpert/e/corerope/index.html">a well-detailed technical explanation</a>, <a href="https://www.righto.com/2019/07/software-woven-into-wire-core-rope-and.html?m=1">Ken Shiriff's blog, focusing on the AGC</a>, <a href="./assets/20260304/The Rope Memory - Kuttner.pdf">The Rope Memory - a permanent storage device, P Kuttner (1963)</a>, <a href="./assets/20260304/the-apollo-guidance-computer.pdf">The Apollo Guidance Computer, Ramon L. Alonso and Albert L. Hopkins (1963)</a></p>
+
+			<div class="separator"></div>
+			
+			<p><a href="#memory_index">< back to index</a></p>
+			<div class="breakout">
+			<p id="core"><b>Magnetic Core Memory</b></p>
+				<p style="margin-bottom: 0%; margin-top: 0%;"><b>Esoteric rating:</b> Medium</p>
+				<p style="margin-bottom: 0%; margin-top: 0%;"><b>Complexity:</b> Expert level electro-knitting</p>
+				<p style="margin-bottom: 0%; margin-top: 0%;"><b>Read/Write</b></p>
+				<p style="margin-bottom: 0%; margin-top: 0%;"><b>Random access</b></p>
+				<p style="margin-top: 0%;"><b>Destructive read</b></p>
+			</div>
+
+			<p><b>When was it developed, and by who?</b></p>
+			<p><a href="https://patents.google.com/patent/US2736880A/en?oq=US2736880A">Patented</a> by <a href="https://en.wikipedia.org/wiki/Jay_Wright_Forrester">Jay Forrester</a> in 1951 while working at MIT on the Whirlwind I computer for the US Navy. A fun fact is that Forrester was the first to explain the <a href="https://en.wikipedia.org/wiki/Bullwhip_effect">Bullwhip effect</a>, studying it in his retirement.</p>
+
+			<a href="./assets/20260304/20260304-core.png"><img src="./assets/20260304/20260304-core.png" alt="Illustration of magnetic core memory"></a>
+			<b>Above:</b> Illustration of core memory<i> Click to open full-size.</i><p></p>
+
+			<p><b>How does it work?</b></p>
+			<p>Tiny cores are arranged into a “plane”, being suspended in a grid comprised of a lattice of rows and columns of insulated conductors, with the cores held in crossing points between conductors. In this plane, the (X,Y) crossing point corresponding to a memory address. Because each core would store 1 bit, a word was created by stacking multiple planes to create an array.</p>
+			
+			<a href="./assets/20260304/20260304-core-memory.jpg"><img src="./assets/20260304/20260304-core-memory.jpg" alt="A single plane of Core memory"></a>
+			<b>Above:</b> A single plane of Core memory. <i> Click to open full-size.</i> By Konstantin Lanzet - received per EMailCamera: Canon EOS 400D, CC BY-SA 3.0, <a href="https://commons.wikimedia.org/w/index.php?curid=7025492">wikimedia</a><p></p>
+
+			<p>The cores have a highly square hysteresis characteristic and non-soft magnetic materials (i.e., the cores are bi-stable, highly sensitive to electromagnetic fields but will never flip state after repeated exposure to partial fields).</p>
+			
+			<a href="./assets/20260304/20260304-hyst.jpg"><img src="./assets/20260304/20260304-hyst.jpg" alt="Diagram of a square hysteresis loop" style="width: 50%;"></a>
+			<p></p>
+			<b>Above:</b> Diagram of a square hysteresis loop. From <i>"Telephone Memory Devices", 1968, AT&TCo.</i> (<a href="./assets/20260304/Telephone_Memory_Devices_1968.pdf" target="_blank">Download</a>)<i> Click to open full-size.</i><p></p>
+
+			<p>A bit could be written to a specific address by energising a single “Y” wire and “X” wire, which would together provide enough current (and thus electromagnetic field) to flip the magnetic state of only the core at which they intersected; the polarity of current applied thus determined if the bit was “0” or “1”. To write a word, the same (X, Y) wires on each plane in the array were simultaneously energised.</p>
+			<p>A sense wire was woven diagonally through the cores, passing through each core once. To read a memory address, the same (X, Y) wires were energised but in the “0” polarity. If the core was holding a “1” this would cause it to flip to a “0” state. As the core’s magnetic polarity flipped it would emit an electro-magnetic field that would induce a current in the sense wire. </p>
+			<p>Because this was a destructive read, the core’s value had to be immediately re-written unless no longer required – slowing down the read speed.</p>
+
+			<p><b>Benefits?</b></p>
+			<p>Erasable and relatively space-efficient. Reliable.</p>
+
+			<p><b>Drawbacks?</b></p>
+			<p>Mechanical limits to miniaturisation – engineers developed incredibly small magnetic cores for this technology but physical limits were imposed by the need to ensure that nearby cores were not energised during operations. Faster than alternatives.</p>
+
+			<p><b>References</b></p>
+			<a href="https://en.wikipedia.org/wiki/Magnetic-core_memory">Wikipedia</a>, <a href="https://web.archive.org/web/20160815145218/http://www.cs.ubc.ca/~hilpert/e/coremem/index.html"> a well-detailed explanation</a>, <a href="https://patents.google.com/patent/US2736880A/en?oq=US2736880A">original patent</a>, <a href="./assets/20260304/Telephone_Memory_Devices_1968.pdf">Telephone Memory devices (1968)</a>
+
+			<div class="separator"></div>
+
+			<p><a href="#memory_index">< back to index</a></p>
+			<div class="breakout">
+				<p id="tape"><b>Magnetic Tape memory</b></p>
+				<p style="margin-bottom: 0%; margin-top: 0%;"><b>Esoteric rating:</b> Low, but increasing</p>
+				<p style="margin-bottom: 0%; margin-top: 0%;"><b>Complexity:</b> Medium</p>
+				<p style="margin-bottom: 0%; margin-top: 0%;"><b>Read/Write</b></p>
+				<p style="margin-top: 0%;"><b>Sequential read, but random access is possible</b></p>
+			</div>
+
+			<p><b>When was it developed, and by who?</b></p>
+			<p>IBM, first commercialised as “UNISERVO” for the “UNIVAC I” computer in 1951 and later widely adopted. </p>
+
+			<a href="./assets/20260304/20260304-magnetic_tape.png"><img src="./assets/20260304/20260304-magnetic_tape.png" alt="Illustration of magnetic tape memory"></a>
+			<b>Above:</b> An illustration of magnetic tape memory</a>. <i> Click to open full-size.</i><p></p>
+
+			<p><b>How does it work?</b></p>
+			<p>A thin plastic tape is coated with a magnetic material (noted as typically red iron oxide by Bell in 1968). This tape is wound around two servomotor-controlled reels such that it can be wound from one onto the other. As the tape is wound/unwound it passes very close to (or in direct contact with, but this increases wear) a read/write head.</p>
+			
+			<a href="./assets/20260304/20260304-cassette-vhs.jpg"><img src="./assets/20260304/20260304-cassette-vhs.jpg" alt="Audio cassette tape / VHS tape"></a>
+			<b>Above:</b> Left: Audio cassette tape. Right: VHS Tape (Credit: Toby Hudson, CC BY-SA 2.5 AU). <i> Click to open full-size.</i><p></p>
+
+			<p>The read/write head can enter data into “blocks” in the tape as it moved past – this is done by applying a magnetic field to the tape. This is achieved by a core with a coil wound around it, and a gap in the core for the tape to wind through. Depending on the polarity of current applied to the coil a “1” or “0” will be magnetically encoded into the corresponding address location on the tape.</p>
+			<p>Data is read in the opposite manner, with the moving magnetic tape inducing a current in the read head according to its polarity.</p>
+
+			<p><b>Benefits?</b></p>
+			<p>Readily expandable – just add more tape. In fact, I was surprised to discover that Oracle still sells <a href="https://www.oracle.com/storage/tape-storage/">a magnetic tape solution</a> for data archival, scalable to 57.6EB. Data density could be increased by reducing the size of each magnetic block, or by adding more read/write blocks on the head (by increasing the width of the tape).</p>
+			<p>Of course, what comes to mid are the mass-manufactured industry standards for magnetic tape technologies, such as the audio cassette and VHS. These proved long-lived, only really made obsolete by the higher density, lower cost and (arguably) more robust optical storage formats: CD and DVD.</p>
+
+			<p><b>Drawbacks?</b></p>
+			<p>Data could be lost if the tape is exposed to a magnetic field. Tapes can also become mechanically worn, and are no match for curious children.</p>
+
+			<p>Random access is possible but with a large latency as the servomotors have to wind the tape to the appropriate address location.</p>
+
+			<p><b>References</b></p>
+			<a href="https://en.wikipedia.org/wiki/Magnetic-tape_data_storage">Wikipedia</a>
+
+			<div class="separator"></div>
+
+			<p><a href="#memory_index">< back to index</a></p>
+			<div class="breakout">
+				<p id="bubble"><b>Bubble memory</b></p>
+				<p style="margin-bottom: 0%; margin-top: 0%;"><b>Esoteric rating:</b> High</p>
+				<p style="margin-bottom: 0%; margin-top: 0%;"><b>Complexity:</b> Doesn’t sound real</p>
+				<p style="margin-bottom: 0%; margin-top: 0%;"><b>Read/Write</b></p>
+				<p style="margin-bottom: 0%; margin-top: 0%;"><b>Sequential, but random access is possible</b></p>
+				<p style="margin-top: 0%;"><b>Destructive read</b></p>
+			</div>
+
+			<p><b>When was it developed, and by who?</b></p>
+			<p>Developed in the late 1960s at Bell labs by numerous researchers including Paul Michaelis and Andrew Bobeck, patented in 1966 and ownership transferred to AT&T. It enjoyed a brief period of high hopes and modest industrial application before advantages in memory density and robustness were overtaken by improvements in hard drives and electronic memory technologies.</p>
+
+			<a href="./assets/20260304/20260304-bubble.png"><img src="./assets/20260304/20260304-bubble.png" alt="Illustration of bubble memory"></a>
+			<b>Above:</b> An illustration of bubble memory. <i> Click to open full-size.</i><p></p>
+
+			<p><b>How does it work?</b></p>
+			<p>A thin magnetic film (less than 0.001 inch) is placed between two permanent magnets which break up the magnetic domains in the film into uniform cylinders 3 micrometres in diameter. This is called the magnetic bias field.</p>
+			<p>At one end of the film is a so-called bubble generator with a rotating magnetic field at a metal patch, split by a non-magnetic pin shaped conductor. The rotating field creates and stores a seed bubble that is held in position by the metal patch. </p>
+			<p>When an electrical pulse is applied to the pin the seed bubble is split and half is thrown by the rotating field into the start of a track – the other half remains under the patch and regains its full size. A “1” has been entered into the shift register – no pulse would have omitted a bubble and represented a “0”.</p>
+			<p>The bubble, a tiny region of magnetic polarity, is then moved along the film by applying a second magnetic field to the film perpendicular to the permanent bias field. To keep the bubble travelling in an accurate path it is guided by minute structures of magnetic film. Coils around the bubble memory film create “X” and “Y” fields which are energised to create a rotating field in the film, which moves each bubble around discrete permalloy guides according to the field’s rotation rate. As Intel remark “various shapes for these metallic patterns have been used by different manufacturers…at Intel asymmetric chevrons are used”. The coordinated addition (or omission) of bubbles at the seed pin and discrete stepping along the chevron track creates a shift register.</p>
+			<p>Before being entered into the main memory the bubble is sent along the input track. When the input track is full (64 bytes in the Intel 7110 chip) all bubbles are inserted into storage loops in parallel. This process is called swapping, because as the bubbles are inserted into storage loops they take the place of an old bubble or bubble-gap. The swapping structure looks like a claw, one end which transmits the new bubble into the storage loop (with an electromagnetic pulse that pushes but does not split the bubble) and the other which guides the old bubble out of the storage loop to the input track, where is it sent for destruction.</p>
+			<p>Once written into the storage loop, data is retained in sequential order in rows of chevrons and waits, stationary, until further reading or writing is carried out. </p>
+			<p>Reading is carried out in two stages; firstly replication of the appropriate bubble (or vacancy) from the storage loop to the output track and secondly detection. The bubble is replicated in a similar way to bubble generation; a current pulse on a hairpin splits the bubble, half of which is returned to its position in the storage loop and the other half being propelled to the output track.</p>
+			<p>On the output track bubbles are passed through a magnetoresistive structure which allows an electrical circuit to detect changes in the magnetic field as changes in resistance. Once bubbles have been read they are obsolete and destroyed.</p>
+			
+			<p><b>Benefits?</b></p>
+			<p>The 1984 Intel Components Handbook claims speeds with tens of thousands of bits per second after an initial latency of tens of milliseconds. They reference “a million or more bits per device” - a very high memory density at the time. Other key benefits include non-volatility, unlike some contemporaneous competitor electronic memories, and no moving parts, unlike hard-drives. This led to adoption in extreme and military applications. Konami briefly used bubble memory for its arcade hardware where a further advantage (for distributors) was preventing games from being duplicated.</p>
+			
+			<a href="./assets/20260304/20260304-bubble1.jpg"><img src="./assets/20260304/20260304-bubble1.jpg" alt="Intel 7110 bubble memory"></a>
+			<b>Above:</b> Intel 7110 bubble memory. <i> Click to open full-size.</i><p></p>
+
+			<p><b>Drawbacks?</b></p>
+			<p>While the manufacturing process has some similarities to that for integrated circuits, unlike the claims of the 1966 patent that “channels are defined simply on a magnetic sheet by equally simple printed circuit techniques”, challenges in manufacturing at scale led to higher costs than other memories. The need for complex electronics to control functions like bubble generation, splitting, swapping and reading also added cost and power consumption.</p>
+			<p>The technology also has to contend with inefficient random access; bits within each storage loop had to be read and replicated sequentially, resulting in additional latency, similar to other sequential memories.</p>
+			
+			<p><b>References</b></p>
+			<a href="https://en.wikipedia.org/wiki/Bubble_memory">Wikipedia</a>, <a href="https://patents.google.com/patent/US3454939A/">original patent</a>, <a href="https://archive.org/details/intel-memory-components-handbook-1984/page/n571/mode/2up">Intel memory components handbook 1984</a>, <a href="https://www.dvorak.org/blog/whatever-happened-to-bubble-memory/">Journalistic retrospective</a>, <a href="https://electrickery.nl/comp/pc5000/bubble.html">'electrickery' blog</a>, <a href="https://hackaday.io/project/170832-magnetic-bubble-memory-makes-a-comeback">Hackaday</a>
+			
+			<div class="separator"></div>
+
+			<p id="outro"><b>Remembering obsolete memories</b></p></p>
+			<p>So, some half a century on, what can we take from the development of these magnetic memories?</p>
+			<p>Each technology is a response to the requirements of certain applications within the bounds of available knowledge and technical capabilities. Looking at technology in this solution-oriented way, each innovation was, essentially, the result of a change in requirement or capability; exactly the same applies today.</p>
+			<p>In fact, in a way I've underrepresented the variety and ingenuity of magnetic memory devices. Numerous other schemes have been developed or iterated on, either in concept, prototype or commercial deployment. A few I omitted for time include twistor memory, EM coupling, ferrite sheet, as well as variations on core memory.</p> 
+			<p>MIT engineers selected memory technologies which best met the needs of their system; core rope for the ROM and core memory for the RAM. Each had high memory density for the time, paired with suitable environmental robustness as a result of having no moving mechanical parts that could be disrupted during spaceflight. Cost and complexity of manufacture (and, in the case of core rope, near-impossibility of rework) was a drawback which NASA could accept.</p>
+			
+			<a href="./assets/20260304/20260304-agc_memory.jpg"><img src="./assets/20260304/20260304-agc_memory.jpg" alt="AGC memory module"></a>
+			<b>Above:</b> AGC memory module. <i> Click to open full-size.</i><p></p>
+
+			<p>I’d like to conjecture that bubble memory might have been considered if it was available at the time; its higher memory density and access speed would have been advantages. Indeed, Intel propose bubble memory as being suitable for aircraft navigation, avionics and robotics, as well as in “severe environments”.</p>
+			<p>Indeed, as memory technology has developed spacecraft today exclusively use electronic memories; DRAM, SRAM, Flash and EEPROM. It is more cost-effective to radiation-harden these technologies than to use alternatives. Yet, even these technologies may not enjoy their eminence forever as manufacturers continue to research replacements. A 2009 presentation proposes technologies such as ferroelectric RAM, Magnetoresistive RAM and Chalcogenide RAM.</p>
+			<p>Spacecraft aside, memory requirements are also changing. I personally have over 200Gb of data stored on my PC and backed-up in the cloud, alongside 1Tb of TV shows. This hoard never shrinks, only grows, and I’m sure the same applies to millions of others in the developing world. We therefore need highly power-efficient memories suitable for long-term storage without degradation, to reduce power use and consequent costs and environmental impacts.</p>
+			<p>In turn, technology companies have recently embarked on a generational-scale quest to ingest, process and regurgitate all of humanity’s data via subscription-based chatbots. I’m talking about Artificial Intelligence, and while the hardware frontiers I’ve seen most commonly discussed are power generation and storage for datacentres, processor (GPU and TPU) performance and cooling and communications technologies (such as fibre to the chip or radio-frequency communications) – I wonder if there’s a shift in memory requirements too.</p>
+			<p>So, as our requirements continue to change, engineers will continue to develop new memory technologies – but I want to end with a nod to preservation efforts. Just as I have struggled to uncover detailed information about these obsolete memory technologies, there is a race to preserve culturally important media stored on obsolete formats. Changes in memory technology, among others, has erected technological barriers around their preservation and use. </p>
+			<p>Let’s not treat obsolete memory formats and technologies as incidental compared to the data itself – we should instead preserve and remember them as equally relevant cultural artefacts.</p>
+
+			<div class="separator"></div>
+			<p>I've been reading:</p>
+			<p><i>Digital Apollo, David A. Mindell (2008)</i></p>
+			<p><i><a href="./assets/20260304/Telephone_Memory_Devices_1968.pdf">Telephone Memory Devices, AT&T Co (1968)</i></a></p>
+			<p><i><a href="./assets/20260304/The Rope Memory - Kuttner.pdf">The Rope Memory - a permanent storage device, P Kuttner (1963)</i></a></p>
+			<p><i><a href="./assets/20260304/the-apollo-guidance-computer.pdf">The Apollo Guidance Computer, Ramon L. Alonso and Albert L. Hopkins (1963)</i></a></p>
+			<p><i><a href="./assets/20260304/memory_devices_for_space_applications_2009.pdf">Memory Technology for Space, Ian Troxel (2009)</i></a></p>
+			<p><i><a href="archive.org/details/intel-memory-components-handbook-1984/page/6-6/mode/2up">Intel memory components handbook (1984)</i></a></p>
+
+		</div>
+		
+		<p></p>
+	<div class="breakout">
+		Thanks for reading! If you enjoyed this and would like to stay in touch, consider <a href="./subscribe.html">subscribing</a> to this blog - you'll receive an email whenever I next add an entry. Cheers!
+	</div>
+
+  
+
+</body>
+</html>

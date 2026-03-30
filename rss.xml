@@ -7,10 +7,28 @@
             I'm an engineer working in Glasgow, Scotland. This personal blog is a collection of my writing on whatever I find interesting, mainly on the themes of design and sustainability.
         </description>
         <language>en-uk</language>
-        <pubDate>Fri, 26 Dec 2025 00:00 GMT</pubDate>
+        <pubDate>Mon, 30 Mar 2026 00:00 GMT</pubDate>
         <docs>https://www.rssboard.org/rss-specification</docs>
         <atom:link href="https://2earth.github.io/website/rss.xml" rel="self" type="application/rss+xml"/>
         
+        <item>
+            <title>
+                Remembering Magnetic Memories and the Apollo AGC
+            </title>
+            <link>
+                https://2earth.github.io/website/20260304.html
+            </link>
+            <description>
+                Charting the evolution of magnetic memories, their strengths and weaknesses and how these incredible technologies work - with reference to the NASA Apollo Guidance Computer
+            </description>
+            <pubDate>
+                Wed, 04 Mar 2026 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20260304.html
+            </guid>
+        </item>
+
 		<item>
             <title>
                 Reflections on the IEA world energy outlook 2025

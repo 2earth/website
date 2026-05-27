@@ -7,10 +7,28 @@
             I'm an engineer working in Glasgow, Scotland. This personal blog is a collection of my writing on whatever I find interesting, mainly on the themes of design and sustainability.
         </description>
         <language>en-uk</language>
-        <pubDate>Mon, 27 Apr 2026 00:00 GMT</pubDate>
+        <pubDate>Wed, 27 May 2026 00:00 GMT</pubDate>
         <docs>https://www.rssboard.org/rss-specification</docs>
         <atom:link href="https://2earth.github.io/website/rss.xml" rel="self" type="application/rss+xml"/>
         
+		<item>
+            <title>
+                Chatting with myself about AI
+            </title>
+            <link>
+                https://2earth.github.io/website/20260525.html
+            </link>
+            <description>
+                Labubu is an ugly-cute snaggletoothed gremlin and an international phenomenon, but what does she tell us about loneliness, social role-play and simulation, addiction and the hyperreal?
+            </description>
+            <pubDate>
+                Mon, 25 May 2026 00:00 GMT
+            </pubDate>
+            <guid>
+                https://2earth.github.io/website/20260525.html
+            </guid>
+        </item>
+		
 		<item>
             <title>
                 Chatting with myself about AI
